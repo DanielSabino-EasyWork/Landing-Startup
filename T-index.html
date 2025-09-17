@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AcmeFlow – Ship your SaaS faster</title>
+  <meta name="description" content="Startup SaaS landing built 100% with Tailwind CSS: hero, benefits, pricing, testimonials, and contact form. Lightweight, fast, accessible." />
+  <meta property="og:title" content="AcmeFlow – Ship your SaaS faster" />
+  <meta property="og:description" content="SaaS landing (Tailwind): hero, benefits, pricing, testimonials, and contact." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <!-- Tailwind Play CDN (for production, build Tailwind to purge unused classes) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="ScripsCSS.js"></script>
+</head>
+<body class="min-h-screen bg-base-900 text-text flex flex-col">
+  <!-- Decorative background -->
+  <div class="pointer-events-none fixed inset-0 -z-10 bg-hero-grid"></div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-gradient-to-b from-[rgba(11,16,32,.85)] via-[rgba(11,16,32,.5)] to-transparent backdrop-blur-sm">
+    <div class="max-w-[1200px] mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-extrabold" aria-label="AcmeFlow">
+        <span class="w-7 h-7 rounded-lg shadow-[0_8px_20px_rgba(34,211,238,.35)] bg-gradient-to-br from-cyan-300 to-sky-400 supports-[background-image:conic-gradient(from_180deg,#22d3ee,#0ea5e9)]:bg-[conic-gradient(from_180deg,#22d3ee,#0ea5e9)]"></span>
+        <span>AcmeFlow</span>
+      </a>
+      <nav aria-label="Primary" class="hidden sm:block">
+        <ul class="flex gap-4 text-text-muted">
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#benefits">Benefits</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#pricing">Pricing</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menuBtn" class="sm:hidden border border-white/40 text-text px-3 py-2 rounded-lg">Menu</button>
+    </div>
+    <div id="mobileMenu" class="hidden sm:hidden max-w-[1200px] mx-auto px-4 pb-3" role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <nav>
+        <ul class="grid gap-2 text-text-muted">
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#benefits">Benefits</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#pricing">Pricing</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-text" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="scroll-mt-24">
+    <!-- Hero -->
+    <section class="py-20 sm:py-24">
+      <div class="max-w-[1200px] mx-auto px-4 grid md:grid-cols-[1.1fr_.9fr] gap-10 items-center">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="inline-block text-xs px-2 py-1 rounded-full bg-cyan-400/15 border border-cyan-300/40 text-sky-300">New</span>
+            <span class="text-text-muted">Iterate 10× faster</span>
+          </div>
+          <h1 class="text-[clamp(1.9rem,3.8vw+0.8rem,3.2rem)] leading-tight font-bold mb-4">Turn visitors into customers with a blazing‑fast landing</h1>
+          <p class="text-text-muted max-w-[58ch]">AcmeFlow is an SEO‑friendly template for SaaS startups: accessible, responsive, and optimized. Ready to integrate with any backend.</p>
+          <div class="flex flex-wrap gap-3 mt-5">
+            <a href="#contact" class="inline-flex items-center gap-2 font-bold text-base-900 px-4 py-3 rounded-xl shadow-soft transition hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-cyan-300 to-sky-400">Get started free</a>
+            <a href="#pricing" class="inline-flex items-center gap-2 font-bold px-4 py-3 rounded-xl border border-white/60 text-text hover:bg-white/10">See pricing</a>
+          </div>
+          <p class="text-text-muted text-sm mt-3">No credit card · Cancel anytime</p>
+        </div>
+        <aside class="rounded-xl2 border border-white/20 bg-white/5 shadow-soft p-5 animate-float" aria-label="Product preview">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" type="image/jpeg" />
+            <img loading="lazy" decoding="async" width="1200" height="720" class="w-full h-auto rounded-lg" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Dashboard panel preview"/>
+          </picture>
+          <ul class="text-text-muted list-disc pl-4 mt-3 space-y-1">
+            <li>Semantic HTML5 + Tailwind Grid/Flex</li>
+            <li>ES6+ JS: slider, mobile menu, validation</li>
+            <li>Optimized images and lazy‑load</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="py-16 scroll-mt-24" aria-labelledby="benefits-title">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <h2 id="benefits-title" class="text-2xl font-semibold mb-2">Benefits that matter</h2>
+        <p class="text-text-muted">Built for conversion, maintainable, and easy to integrate.</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-5" role="list">
+          <article class="rounded-xl2 border border-white/20 bg-white/5 p-6 min-h-[160px]" role="listitem">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <h3 class="font-semibold">Performance first</h3>
+            </div>
+            <p class="text-text-muted m-0">Minimal CSS and no heavy dependencies. Deferred scripts and lazy images.</p>
+          </article>
+          <article class="rounded-xl2 border border-white/20 bg-white/5 p-6 min-h-[160px]" role="listitem">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18"/></svg>
+              <h3 class="font-semibold">Truly responsive</h3>
+            </div>
+            <p class="text-text-muted m-0">Grid + Flexbox to compose adaptive sections on any viewport.</p>
+          </article>
+          <article class="rounded-xl2 border border-white/20 bg-white/5 p-6 min-h-[160px]" role="listitem">
+            <div class="flex items-center gap-2 mb-2">
+              <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0a9 9 0 0118 0z"/></svg>
+              <h3 class="font-semibold">Accessibility</h3>
+            </div>
+            <p class="text-text-muted m-0">Proper ARIA roles, color contrast, and keyboard navigation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-16 scroll-mt-24" aria-labelledby="pricing-title">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <h2 id="pricing-title" class="text-2xl font-semibold mb-2">Simple pricing</h2>
+        <p class="text-text-muted">Pick the plan that fits your stage.</p>
+        <div class="grid md:grid-cols-3 gap-6 mt-5">
+          <!-- Starter -->
+          <article class="rounded-xl2 border border-white/20 bg-white/5 p-6 flex flex-col">
+            <h3 class="font-semibold">Starter</h3>
+            <div class="flex items-baseline gap-1 my-3"><strong class="text-3xl">$0</strong><span class="text-text-muted">/mo</span></div>
+            <ul class="text-text-muted list-disc pl-4 space-y-1 mb-4">
+              <li>Essential sections</li>
+              <li>Email support</li>
+              <li>100 form submissions</li>
+            </ul>
+            <a href="#contact" class="mt-auto inline-flex items-center gap-2 font-bold px-4 py-3 rounded-xl border border-white/60 hover:bg-white/10">Choose</a>
+          </article>
+          <!-- Pro (highlighted) -->
+          <article class="p-[1px] rounded-xl2 bg-gradient-to-r from-cyan-300/60 to-sky-400/60">
+            <div class="rounded-xl2 bg-white/5 p-6 h-full flex flex-col">
+              <span class="ml-auto -mb-2 translate-y-1 inline-block text-xs px-2 py-1 rounded-full bg-cyan-400/15 border border-cyan-300/40 text-sky-300">Most popular</span>
+              <h3 class="font-semibold">Pro</h3>
+              <div class="flex items-baseline gap-1 my-3"><strong class="text-3xl">$19</strong><span class="text-text-muted">/mo</span></div>
+              <ul class="text-text-muted list-disc pl-4 space-y-1 mb-4">
+                <li>Everything in Starter</li>
+                <li>Integrations (Zapier/Webhooks)</li>
+                <li>Basic analytics</li>
+              </ul>
+              <a href="#contact" class="mt-auto inline-flex items-center gap-2 font-bold text-base-900 px-4 py-3 rounded-xl shadow-soft transition hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-cyan-300 to-sky-400">Choose</a>
+            </div>
+          </article>
+          <!-- Business -->
+          <article class="rounded-xl2 border border-white/20 bg-white/5 p-6 flex flex-col">
+            <h3 class="font-semibold">Business</h3>
+            <div class="flex items-baseline gap-1 my-3"><strong class="text-3xl">$49</strong><span class="text-text-muted">/mo</span></div>
+            <ul class="text-text-muted list-disc pl-4 space-y-1 mb-4">
+              <li>Everything in Pro</li>
+              <li>Priority support</li>
+              <li>Advanced components</li>
+            </ul>
+            <a href="#contact" class="mt-auto inline-flex items-center gap-2 font-bold px-4 py-3 rounded-xl border border-white/60 hover:bg-white/10">Talk to sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (slider) -->
+    <section class="py-16" aria-labelledby="testimonials-title">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <h2 id="testimonials-title" class="text-2xl font-semibold mb-2">What teams say</h2>
+        <div class="rounded-xl2 border border-white/20 overflow-hidden" id="slider" aria-roledescription="carousel" aria-label="Testimonials">
+          <div class="flex transition-transform duration-500 ease-out" id="slides">
+            <figure class="min-w-full p-6 bg-white/5">
+              <blockquote class="mb-1">“We went from idea to MVP in hours. This landing converts.”</blockquote>
+              <figcaption class="text-text-muted">— Ana, PM at FinTech</figcaption>
+            </figure>
+            <figure class="min-w-full p-6 bg-white/5">
+              <blockquote class="mb-1">“Clean and accessible code. Easy to maintain.”</blockquote>
+              <figcaption class="text-text-muted">— Luis, Frontend Lead</figcaption>
+            </figure>
+            <figure class="min-w-full p-6 bg-white/5">
+              <blockquote class="mb-1">“Lightweight and fast: Lighthouse 95+ with no sweat.”</blockquote>
+              <figcaption class="text-text-muted">— Sofía, Growth</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="dots" class="flex gap-2 justify-center mt-3" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 scroll-mt-24" aria-labelledby="contact-title">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <h2 id="contact-title" class="text-2xl font-semibold mb-2">Let’s talk</h2>
+        <p class="text-text-muted">Tell us about your project. We reply within 24 h.</p>
+        <form id="contactForm" novalidate class="grid gap-4 mt-5">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block mb-1">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-[#0b1226] border border-white/25 focus:outline-none focus:ring-2 focus:ring-sky-300/50" />
+              <div class="text-red-400 text-sm min-h-[1.1em]" data-error-for="name"></div>
+            </div>
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="jane@acme.com" class="w-full px-4 py-3 rounded-xl bg-[#0b1226] border border-white/25 focus:outline-none focus:ring-2 focus:ring-sky-300/50" />
+              <div class="text-red-400 text-sm min-h-[1.1em]" data-error-for="email"></div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label for="plan" class="block mb-1">Plan</label>
+              <select id="plan" name="plan" required class="w-full px-4 py-3 rounded-xl bg-[#0b1226] border border-white/25 focus:outline-none focus:ring-2 focus:ring-sky-300/50">
+                <option value="">Select…</option>
+                <option>Starter</option>
+                <option>Pro</option>
+                <option>Business</option>
+              </select>
+              <div class="text-red-400 text-sm min-h-[1.1em]" data-error-for="plan"></div>
+            </div>
+            <div>
+              <label for="phone" class="block mb-1">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+1 809…" class="w-full px-4 py-3 rounded-xl bg-[#0b1226] border border-white/25 focus:outline-none focus:ring-2 focus:ring-sky-300/50" />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block mb-1">Message</label>
+            <textarea id="message" name="message" rows="4" required minlength="10" placeholder="I need a landing page for my SaaS…" class="w-full px-4 py-3 rounded-xl bg-[#0b1226] border border-white/25 focus:outline-none focus:ring-2 focus:ring-sky-300/50"></textarea>
+            <div class="text-red-400 text-sm min-h-[1.1em]" data-error-for="message"></div>
+          </div>
+          <div>
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" id="consent" required class="rounded" />
+              <span>I accept the privacy policy</span>
+            </label>
+            <div class="text-red-400 text-sm min-h-[1.1em]" data-error-for="consent"></div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="inline-flex items-center gap-2 font-bold text-base-900 px-4 py-3 rounded-xl shadow-soft transition hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-cyan-300 to-sky-400" type="submit">Send</button>
+            <span class="text-green-400 text-sm" id="formSuccess" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 border-t border-white/20 text-text-muted mt-auto">
+    <div class="max-w-[1200px] mx-auto px-4 flex justify-between gap-4 flex-wrap">
+      <small>© <span id="year"></span> AcmeFlow. All rights reserved.</small>
+      <small><a href="#home" class="hover:underline">Back to top ↑</a></small>
+    </div>
+  </footer>
+
+  <script src="T-scrips.js"></script>
+</body>
+</html>
