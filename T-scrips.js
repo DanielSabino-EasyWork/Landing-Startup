@@ -5,39 +5,43 @@
     // Dynamic year
     $('#year').textContent = new Date().getFullYear();
 
-    // Mobile menu open/close + scroll lock (robust + resize-safe)
+    // Mobile menu open/close + scroll lock (off-canvas drawer)
     const htmlEl = document.documentElement;
     const menuBtn = $('#menuBtn');
-    const menuOverlay = $('#mobileMenu');
+    const drawer = $('#mobileDrawer');
+    const backdrop = $('#menuBackdrop');
     const menuClose = $('#menuClose');
     let isMenuOpen = false;
+
     function setMenu(open){
       isMenuOpen = open;
-      menuOverlay.classList.toggle('hidden', !open);
-      menuOverlay.toggleAttribute('inert', !open);
-      menuOverlay.setAttribute('aria-hidden', String(!open));
+      drawer.classList.toggle('-translate-x-full', !open);
+      drawer.classList.toggle('translate-x-0', open);
+      drawer.toggleAttribute('inert', !open);
+      drawer.setAttribute('aria-hidden', String(!open));
+      backdrop.classList.toggle('hidden', !open);
       htmlEl.classList.toggle('overflow-hidden', open);
       menuBtn?.setAttribute('aria-expanded', String(open));
       menuBtn?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       if(open){
-        const first = menuOverlay.querySelector('a, button');
+        const first = drawer.querySelector('a, button');
         first?.focus();
       }
     }
+
     menuBtn?.addEventListener('click', ()=> setMenu(!isMenuOpen));
-    menuOverlay?.addEventListener('click', (e)=>{ if(e.target === menuOverlay) setMenu(false); });
+    backdrop?.addEventListener('click', ()=> setMenu(false));
     menuClose?.addEventListener('click', ()=> setMenu(false));
     document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') setMenu(false); });
+
+    // Close when clicking any nav link inside the drawer
+    drawer?.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', ()=> setMenu(false)); });
 
     // Auto-close when resizing to desktop (>= md)
     const mql = window.matchMedia('(min-width: 768px)');
     const onBp = (e)=>{ if(e.matches) setMenu(false); };
     try { mql.addEventListener('change', onBp); } catch(_) { mql.addListener(onBp); }
     let rto; window.addEventListener('resize', ()=>{ clearTimeout(rto); rto = setTimeout(()=>{ if(window.innerWidth >= 768) setMenu(false); }, 150); });
-    // Close menu when any nav link is clicked (so content is visible immediately)
-    menuOverlay?.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', () => setMenu(false));
-    });
 
     // Testimonials slider
     const slides = $('#slides');
