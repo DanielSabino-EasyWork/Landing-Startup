@@ -2,20 +2,23 @@
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Ubuntu','Helvetica Neue','Arial','Noto Sans','sans-serif'] },
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Ubuntu','Helvetica Neue','Arial','Noto Sans','sans-serif'],
+            display: ['Manrope','Inter','ui-sans-serif','system-ui']
+          },
           colors: {
-            base: { 900: '#0b1020', 800:'#0f172a' },
-            text: { DEFAULT:'#e6e8ee', muted:'#94a3b8' }
+            // Trust palette: base (neutral/dark), brand (blue), support (green), neutral (slate)
+            base: { 900:'#0b1220', 800:'#0e162b', 700:'#13203a' },
+            text: { DEFAULT:'#e6edf5', muted:'#a9b4c7' },
+            brand: { 300:'#7dd3fc', 400:'#38bdf8', 500:'#0ea5e9', 600:'#0284c7' },
+            support:{ 300:'#6ee7b7', 400:'#34d399', 500:'#10b981' },
+            neutral:{ 300:'#cbd5e1', 400:'#94a3b8', 500:'#64748b' }
           },
-          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.35)' },
-          borderRadius: { xl2: '16px' },
+          borderRadius: { xl2:'16px' },
+          boxShadow: { soft:'0 10px 30px rgba(0,0,0,.35)' },
           backgroundImage: {
-            'hero-grid': 'radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.08), transparent 50%), radial-gradient(900px 500px at 0% 10%, rgba(14,165,233,.12), transparent 50%)'
-          },
-          keyframes: {
-            float: { '0%,100%': { transform:'translateY(0)' }, '50%': { transform:'translateY(-6px)' } },
-          },
-          animation: { float: 'float 8s ease-in-out infinite' }
+            gridfade: 'radial-gradient(1100px 520px at 80% -10%, rgba(56,189,248,.12), transparent 50%), radial-gradient(900px 500px at 0% 10%, rgba(16,185,129,.10), transparent 50%)'
+          }
         }
       }
     }
